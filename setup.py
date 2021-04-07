@@ -4,7 +4,7 @@ from os import path
 base_dir = path.abspath(path.dirname(__file__))
 setup(
   name = 'instatools3',        
-  packages = ['instatools'],   
+  packages = ['instatools3'],   
   version = '0.0.1',    
   license='MIT',     
   description = 'Intagram Stalker&Downloader', 

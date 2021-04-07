@@ -10,8 +10,8 @@ setup(
   description = 'Intagram Stalker&Downloader', 
   author = 'Krypton Byte',                  
   author_email = 'galaxyvplus6434@gmail.com',     
-  url = 'https://github.com/krypton-byte/wasted',   
-  download_url = 'https://github.com/krypton-byte/wasted/archive/0.0.1.tar.gz',    
+  url = 'https://github.com/krypton-byte/instatools3',   
+  download_url = 'https://github.com/krypton-byte/instatools3/archive/0.0.1.tar.gz',    
   keywords = ['instagram', 'downloader', 'stalker'], 
   install_requires=[           
           'requests',

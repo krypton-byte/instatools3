@@ -2,8 +2,8 @@
 @author : Krypton Byte
 '''
 import requests
-def igdownload(url):
-    req=requests.get(url, params={"__a":1}, headers={"User-agent":"Mozilla"})
+def igdownload(url, headers={}):
+    req=requests.get(url, params={"__a":1}, headers=headers)
     if ('graphql' in req.text):
         media=req.json()["graphql"]["shortcode_media"]
         if media.get("is_video"):
@@ -17,7 +17,7 @@ def igdownload(url):
             return {"status":True,"result":[{"type":"image","url":media["display_resources"][-1]["src"]}]}
     else:
         return {"status":False}
-def igstalker(user):
+def igstalker(user, headers={}):
     stalk=requests.get(f"https://www.instagram.com/{user}/",params={"__a":1}, headers={"User-Agent":"Mozilla"}).json()
     if stalk:
         userProperty=stalk["graphql"]["user"]

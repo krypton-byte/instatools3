@@ -3,7 +3,7 @@
 '''
 import requests
 def igdownload(url):
-    req=requests.get(url, params={"__a":1}, headers={"Mozilla"})
+    req=requests.get(url, params={"__a":1}, headers={"User-agent":"Mozilla"})
     if ('graphql' in req.text):
         media=req.json()["graphql"]["shortcode_media"]
         if media.get("is_video"):

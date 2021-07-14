@@ -2,7 +2,7 @@
 @author : Krypton Byte
 '''
 import requests
-def igdownload(url, headers={}):
+def igdownload(url, headers={"User-Agent":"Mozilla"}):
     req=requests.get(url, params={"__a":1}, headers=headers)
     if ('graphql' in req.text):
         media=req.json()["graphql"]["shortcode_media"]

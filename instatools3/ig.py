@@ -17,8 +17,8 @@ def igdownload(url, headers={}):
             return {"status":True,"result":[{"type":"image","url":media["display_resources"][-1]["src"]}]}
     else:
         return {"status":False}
-def igstalker(user, headers={}):
-    stalk=requests.get(f"https://www.instagram.com/{user}/",params={"__a":1}, headers={"User-Agent":"Mozilla"}).json()
+def igstalker(user, headers={"User-Agent":"Mozilla"}):
+    stalk=requests.get(f"https://www.instagram.com/{user}/",params={"__a":1}, headers=headers).json()
     if stalk:
         userProperty=stalk["graphql"]["user"]
         return {
